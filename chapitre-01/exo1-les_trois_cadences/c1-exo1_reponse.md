@@ -11,7 +11,7 @@ Durée totale d'une image : 1000 / 72 = 13,9 ms
 Temps restant pour le code :13,9 ms - 8,0 ms = 5,9 ms
 
  À 90 Hertz
-Durée totale d'une image :** 1000 / 90 =  11,1 ms
+Durée totale d'une image :1000 / 90 =  11,1 ms
 Temps restant pour le code :11,1 ms - 8,0 ms = 3,1 ms
 
  À 120 Hz
