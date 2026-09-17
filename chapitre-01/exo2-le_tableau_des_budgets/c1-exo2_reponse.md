@@ -1,9 +1,16 @@
 
-Exercice 2 : Le tableau de budget
+# 1. Schéma de la barre temporelle (20 ms au total)
 
-Ce tableau résume les délais observés sur les étapes essentielles du rendu. Il s’appuie sur les documentations des constructeurs et des moteurs de jeu.
+Budget total d'une trame à 50 Hz : 20.0 ms
 
-Les étapes du budget temps
+
+etape	VSync 	Input 	Game Loop 	Render 	Wait 	
+
+temps	1.0ms	4.5ms	2.5ms  	3.0ms 	 0.0ms	
+
+
+
+
 
 1. VSync (Synchronisation verticale)
 Valeur mesurée : 1,0 à 8,3 ms
@@ -19,19 +26,16 @@ Explication : Le système met ce temps à détecter l’action du joueur, qu’i
 Valeur mesurée : Introuvable
 Source technique : Aucune
 Explication : Il n’existe pas de valeur universelle pour cette étape, car elle dépend entièrement du code du jeu, de la physique, des collisions et de la logique de calcul.
+fait : jai donc mis une qui me semble rationnelle
 
 4. Render (Préparation du rendu)
 Valeur mesurée : 3,0 à 5,0 ms
 Source technique : Unreal Engine, Render Thread
 Explication : Le processeur prépare les informations nécessaires au dessin, organise les commandes et les envoie ensuite à la carte graphique pour le rendu final.
 
-5. Swap Buffers (Échange d’affichages)
+5. wait ou Swap Buffers (Échange d’affichages)
 Valeur mesurée : 0,1 à 2,0 ms
 Source technique : NVIDIA Developer, Vulkan / OpenGL
 Explication : Cette étape correspond au moment où la nouvelle image calculée remplace l’ancienne pour être affichée à l’écran.
 
-Pourquoi certaines valeurs sont introuvables ?
 
-Le Game Loop est propre à chaque projet. Les constructeurs ne peuvent pas donner un nombre unique, car cette étape dépend de ce que le développeur a programmé : IA, physique, collisions, animations et logique du jeu.
-
-L’impact du matériel est aussi important. Les autres étapes varient selon la puissance du processeur, de la carte graphique et de la fréquence de rafraîchissement de l’écran, comme 60 Hz, 90 Hz ou 120 Hz.
