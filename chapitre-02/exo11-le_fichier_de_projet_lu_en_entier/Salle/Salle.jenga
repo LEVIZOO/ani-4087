@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+from Jenga import *
+
+with workspace("Salle"):
+    configurations(["Debug", "Release"])
+    targetoses([TargetOS.MACOS])
+    targetarchs([TargetArch.X86_64])
+
+    with project("MaSalle"):
+        consoleapp()
+        language("C++")
+        location("MaSalle")
+        files(["src/**.cpp"]) 
+        includedirs(["include"])
