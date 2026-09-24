@@ -2,7 +2,7 @@
 
 J’ai fait un petit programme qui affiche 3 lignes au demarrage, puis il envoie les memes lignes dans le journal systeme avec `logger`.
 
-## Programme
+# Programme
 
 ```bash
 #!/bin/bash
@@ -24,7 +24,7 @@ ligne 2
 ligne 3
 ```
 
-## Verification du journal
+#  Verification du journal
 
 J’ai vérifié que les outils existent bien sur cette machine :
 
@@ -40,7 +40,7 @@ Et ca donne :
 /usr/bin/log
 ```
 
-## Commande de filtrage
+#  Commande de filtrage
 
 La commande que j’ai utilisée pour ne voir que mes lignes dans le journal, au milieu de tout le reste, c’est :
 
@@ -50,7 +50,7 @@ log show --last 1m --style compact | grep -i 'exo18_test'
 
 Ca permet de filtrer uniquement les messages qui ont le tag `exo18_test`.
 
-## Exemple de sortie attendue
+#  Exemple de sortie attendue
 
 ```text
 2026-09-24 20:00:00 +0000 ... exo18_test: ligne 1
