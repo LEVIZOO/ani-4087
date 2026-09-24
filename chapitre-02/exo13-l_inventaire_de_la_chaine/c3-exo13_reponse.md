@@ -1,12 +1,10 @@
-J’ai lancé la commande demandée :
+J’ai lancé la commande et j’ai recupéré ce que Jenga me dit sur ma machine.
 
 ```bash
 source /Users/levizoonyaba/Documents/Jenga/.venv/bin/activate && cd /Users/levizoonyaba/Documents/Jenga/Jenga/Exemples/24_all_platforms && jenga info -v
 ```
 
-Voici le tableau `Available Toolchains` complet, tel qu’il est affiché sur ma machine.
-
-# Available Toolchains
+Voila le tableau complet `Available Toolchains` :
 
 ```text
 Available Toolchains
@@ -17,50 +15,42 @@ host-apple-clang   apple-clang   macOS       x86_64   gnu
 clang-mingw        clang         Windows     x86_64   mingw
 ```
 
-# Ce qui est présent sur ma machine
+# Ce qu’il y a sur mon Mac
+
+J’ai bien :
 
 - `host-apple-clang`
-  - famille : `apple-clang`
-  - cible : `macOS`
+  - c’est le toolchain natif du Mac
+  - il cible `macOS`
   - architecture : `x86_64`
-  - environnement : `gnu`
 
 - `clang-mingw`
-  - famille : `clang`
-  - cible : `Windows`
+  - c’est un toolchain pour `Windows`
   - architecture : `x86_64`
-  - environnement : `mingw`
+  - il est present, donc Jenga sait faire un peu de Windows aussi
 
-# Ce qui manque sur ma machine
+# Ce qu’il manque
 
-Le tableau montre clairement que les toolchains de cross-compilation supplémentaires ne sont pas installés ou pas configurés ici.
+Il manque quand meme les cibles plus specifiques qui ne sont pas la machine hote ni le Windows minimal.
 
 Il manque notamment :
 
 - `zig-linux-x64` pour Linux
 - `android-ndk` pour Android
 - `emscripten` pour le Web
-- tout autre toolchain non listé dans ce tableau
 
-# Ce que cela signifie
+Donc si je veux compiler les projets pour Linux, Android ou Web, il me faut installer les bons toolchains.
 
-La machine actuelle est un Mac hôte, avec :
+# Ce que ça veut dire
 
-- un toolchain natif macOS : `host-apple-clang`
-- un toolchain Windows minimal : `clang-mingw`
+Mon ordi est un Mac, donc il a bien le toolchain du Mac. Il a aussi un peu de support pour Windows via `clang-mingw`.
 
-Mais il n’y a pas de toolchain Linux, Android, ni Web configuré dans cette installation. Donc, pour compiler les cibles supplémentaires du projet multi-plateforme, il faudrait installer ou configurer précisément :
-
-- Zig pour Linux,
-- Android NDK pour Android,
-- Emscripten pour Web.
+Mais il n’a pas les outils pour faire du Linux cross-compile, pas de NDK Android, et pas d’Emscripten pour le Web. Donc le projet multi-plateforme ne peut pas tout construire d’un coup sur cette machine sans installer des choses supplementaires.
 
 # Conclusion
 
-Le fait que le tableau soit incomplet n’est pas un bug de la commande : c’est une information utile. Elle dit exactement :
+Le tableau est assez parlant. Il dit bien ce qu’il y a et ce qu’il manque. Sur ma machine, il y a juste le Mac et un peu de Windows. Il manque le Linux, le Android et le Web.
 
-- le système hôte est bien là,
-- les toolchains forcément nécessaires au build de macOS et Windows minimal sont présents,
-- mais les toolchains pour Linux, Android et Web manquent encore.
+Donc, si tout manque, il faut installer les toolchains correspondants. Ici, ce n’est pas tout qui manque, mais il manque quand meme les outils pour les autres plateformes.
 
-Donc, si tout manque, on dit bien qu’il faut installer les toolchains attendus. Ici, il ne manque pas tout, mais il manque bien les cibles non natives du projet.
+J’ai aussi vu qu’on est sur macOS, donc le point important c’est que Jenga a bien detecte la machine hote, et il sait qu’on est pas sur Windows ou Linux natif. C’est pour ça qu’on ne voit pas tout.
