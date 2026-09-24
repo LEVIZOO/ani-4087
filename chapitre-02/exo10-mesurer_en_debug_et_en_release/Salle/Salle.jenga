@@ -13,3 +13,11 @@ with workspace("Salle"):
         language("C++")
         location("MaSalle")
         files(["src/**.cpp"])
+
+        with filter("config:Debug"):
+            optimize("Off")
+            symbols(True)
+
+        with filter("config:Release"):
+            optimize("Speed")
+            symbols(False)
