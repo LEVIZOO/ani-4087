@@ -18,3 +18,6 @@ with include("chapitre-03/exo6-etat_contre_evenement/exo6_entrees.jenga"):
 
 with include("chapitre-03/exo7-le_pointeur_cache/exo7_pointeur.jenga"):
     pass
+
+with include("chapitre-03/exo8-le_defaut_reproduit/exo8_raw_delta.jenga"):
+    pass
