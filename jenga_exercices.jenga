@@ -3,3 +3,6 @@ with include("chapitre-03/exo1-la_fenetre_nue/exo1_fenetre.jenga"):
 
 with include("chapitre-03/exo2-la_fenetre_qui_ne_repond_pas/exo2_fenetre.jenga"):
     pass
+
+with include("chapitre-03/exo3-cinq_champs_de_configuration/exo3_fenetre.jenga"):
+    pass
