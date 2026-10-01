@@ -21,3 +21,6 @@ with include("chapitre-03/exo7-le_pointeur_cache/exo7_pointeur.jenga"):
 
 with include("chapitre-03/exo8-le_defaut_reproduit/exo8_raw_delta.jenga"):
     pass
+
+with include("chapitre-03/exo9-le_defaut_corrige/exo9_accumulateur.jenga"):
+    pass
