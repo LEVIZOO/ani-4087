@@ -15,3 +15,6 @@ with include("chapitre-03/exo5-la_taille_qui_change/exo5_taille.jenga"):
 
 with include("chapitre-03/exo6-etat_contre_evenement/exo6_entrees.jenga"):
     pass
+
+with include("chapitre-03/exo7-le_pointeur_cache/exo7_pointeur.jenga"):
+    pass
