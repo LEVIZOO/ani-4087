@@ -9,3 +9,6 @@ with include("chapitre-03/exo3-cinq_champs_de_configuration/exo3_fenetre.jenga")
 
 with include("chapitre-03/exo4-fermer_proprement/exo4_fenetre.jenga"):
     pass
+
+with include("chapitre-03/exo5-la_taille_qui_change/exo5_taille.jenga"):
+    pass

@@ -1,0 +1,10 @@
+with project("Ani4087Exo5Taille"):
+    windowedapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["src/main.cpp"])
+    nkentseudependson(["window", "time", "logger"])
+
+    with filter("system:macOS"):
+        frameworks(["Cocoa", "QuartzCore", "OpenGL", "Metal"])
