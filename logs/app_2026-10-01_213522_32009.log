@@ -1,0 +1,16 @@
+[2026-10-01 21:35:22.706] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 267 frames
+[2026-10-01 21:35:22.707] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)
+[2026-10-01 21:35:32.314] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 451 frames
+[2026-10-01 21:35:32.314] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)
+[2026-10-01 21:35:32.485] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 6 frames
+[2026-10-01 21:35:32.485] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)
+[2026-10-01 21:35:32.621] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 4 frames
+[2026-10-01 21:35:32.621] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)
+[2026-10-01 21:35:32.757] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 4 frames
+[2026-10-01 21:35:32.758] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)
+[2026-10-01 21:35:32.910] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 5 frames
+[2026-10-01 21:35:32.910] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)
+[2026-10-01 21:35:33.062] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 6 frames
+[2026-10-01 21:35:33.062] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)
+[2026-10-01 21:35:33.166] [INF] [default] [main.cpp:30 in operator()] -> [Exo6] NkInput.IsKeyDown : 6 frames
+[2026-10-01 21:35:33.166] [INF] [default] [main.cpp:31 in operator()] -> [Exo6] NkKeyPressEvent : 1 evenement(s)

@@ -1,0 +1,16 @@
+[2026-10-01 23:04:22.033] [INF] [default] [main.cpp:24 in nkmain] -> [Exo10] Mode initial : conservation de l'accumulateur sans focus.
+[2026-10-01 23:04:22.044] [INF] [default] [main.cpp:25 in nkmain] -> [Exo10] Appuyer sur R bascule la remise a zero sans focus.
+[2026-10-01 23:04:22.381] [INF] [default] [main.cpp:45 in operator()] -> [Exo10] Retour de focus : rawDeltaX=0, accumulateur=0
+[2026-10-01 23:04:32.181] [INF] [default] [main.cpp:40 in operator()] -> [Exo10] Focus perdu; mode remise a zero : NON
+[2026-10-01 23:04:57.564] [INF] [default] [main.cpp:45 in operator()] -> [Exo10] Retour de focus : rawDeltaX=0, accumulateur=0
+[2026-10-01 23:04:59.573] [INF] [default] [main.cpp:34 in operator()] -> [Exo10] Remise a zero sans focus : OUI
+[2026-10-01 23:05:06.957] [INF] [default] [main.cpp:34 in operator()] -> [Exo10] Remise a zero sans focus : NON
+[2026-10-01 23:05:08.631] [INF] [default] [main.cpp:40 in operator()] -> [Exo10] Focus perdu; mode remise a zero : NON
+[2026-10-01 23:05:17.147] [INF] [default] [main.cpp:45 in operator()] -> [Exo10] Retour de focus : rawDeltaX=0, accumulateur=0
+[2026-10-01 23:05:20.101] [INF] [default] [main.cpp:34 in operator()] -> [Exo10] Remise a zero sans focus : OUI
+[2026-10-01 23:05:23.115] [INF] [default] [main.cpp:40 in operator()] -> [Exo10] Focus perdu; mode remise a zero : OUI
+[2026-10-01 23:05:30.328] [INF] [default] [main.cpp:45 in operator()] -> [Exo10] Retour de focus : rawDeltaX=0, accumulateur=0
+[2026-10-01 23:05:32.322] [INF] [default] [main.cpp:34 in operator()] -> [Exo10] Remise a zero sans focus : NON
+[2026-10-01 23:05:36.586] [INF] [default] [main.cpp:40 in operator()] -> [Exo10] Focus perdu; mode remise a zero : NON
+[2026-10-01 23:05:48.700] [INF] [default] [main.cpp:45 in operator()] -> [Exo10] Retour de focus : rawDeltaX=0, accumulateur=0
+[2026-10-01 23:05:50.760] [INF] [default] [main.cpp:34 in operator()] -> [Exo10] Remise a zero sans focus : OUI

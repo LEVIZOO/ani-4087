@@ -24,3 +24,6 @@ with include("chapitre-03/exo8-le_defaut_reproduit/exo8_raw_delta.jenga"):
 
 with include("chapitre-03/exo9-le_defaut_corrige/exo9_accumulateur.jenga"):
     pass
+
+with include("chapitre-03/exo10-le_retour_de_focus/exo10_focus.jenga"):
+    pass
