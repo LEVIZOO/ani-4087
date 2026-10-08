@@ -1,0 +1,5 @@
+Lignes avant les fonctions : Pour les 5 elements de la table, j'aurais ecrit 15 lignes de calcul, trois pour chaque centre : x, y et z.
+
+Lignes apres : J'ai 5 lignes d'appels aux fonctions pour poser le plateau et les pieds.
+
+L'erreur que la fonction m'evite : Pour un objet au sol de 450 mm de haut, le centre est a 450 / 2 = 225 mm. La fonction evite de mettre l'objet trop haut ou trop bas.
