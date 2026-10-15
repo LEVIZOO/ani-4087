@@ -1,0 +1,5 @@
+=== Log du moteur (app.log) ===
+[2026-10-15 22:16:05.812] [INF] [default] [NkTextureLibrary.cpp:395 in Load] -> [NkTextureLibrary] Texture chargee : photo1.jpg (1080x809 sRGB)
+
+=== Validation de l'exercice ===
+[2026-10-15 22:16:05.813] [INF] [default] [Demo3D.cpp:2833 in Demo3D_Init] -> [ANI4087][exo4] Load('photo1.jpg') -> valide=oui, ok=oui
