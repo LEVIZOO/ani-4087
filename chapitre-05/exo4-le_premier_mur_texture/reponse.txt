@@ -1,0 +1,8 @@
+Choix de la texture :
+Pour cet exercice, j'ai sélectionné le fichier "photo1.jpg" (résolution 1080x809). La texture est chargée une seule fois à l'initialisation du moteur via texLib->Load(). Le fichier journal.txt confirme la bonne exécution du chargement ("Texture chargee : photo1.jpg (1080x809 sRGB)"). J'ai ensuite lié ce fichier au matériau NK_PBR_METALLIC avec la méthode SetAlbedoMap(), puis appliqué un pavage d'un mètre grâce à SetTriplanarTileSize(1.0f) pour éviter d'étirer l'image sur le mur.
+
+Résultat sur le rendu 3D :
+Avant l'application (photo1_avant.png), le mur s'affiche sous la forme d'un simple panneau gris neutre sans détails de surface. Après l'intégration (photo1_apres.png), sous la même perspective, le motif de photo1.jpg recouvre entièrement le mur avec ses nuances de couleur. La texture apporte un relief visuel qui permet de mieux percevoir les dimensions dans l'espace 3D.
+
+Problème rencontré sur Mac :
+Lors de l'exécution sur macOS, le chemin relatif posait un problème d'accès selon le dossier depuis lequel le binaire était lancé via le Terminal. J'ai dû m'assurer que le fichier photo1.jpg se trouvait exactement dans le répertoire de travail d'exécution pour que le moteur puisse le charger correctement au lieu d'afficher la texture rose de secours.
