@@ -1,0 +1,18 @@
+Mon format pour le plastique tech237 en jpg:
+
+J'ai mesuré les cinq formats sur ma photo (454 x 1008)
+Le JPG fait 60 510 octets, PNG 420 106, QOI 512 285 , BMP 1 374 966
+Le JPG est donc environ 7 fois plus petit que le PNG et environ 23 fois plus petit que le BMP
+Pour la texture d'un plastique qui est une photo pleine de petits détails c'est le plus léger sur le disque. 
+Une fois chargée dans le moteur image coûte ses pixels bruts quel que soit le format donc ce choix change la place sur le disque
+pas la mémoire le JPG est un format avec perte il jette une partie des détails fins pour gagner de la place
+ et ce qui est jeté ne revient jamais si je le réenregistre plusieurs foi 
+ la qualité baisse à chaque fois, et de très près on peut voir de petits carrés
+
+Ce qui m'a surpris :
+
+Le fichier TGA que le moteur vient d'écrire (1 372 940 octets) ne se relit pas je ne l'ai pas remplacé
+je l'ai noté "illisible" et je ne sais pas pourquoi
+Autre surprise : ma photo d'origine faisait 39 852 octets mais le JPG réécrit par le moteur en fait 60 510
+donc plus gros que l'original
+le BMP et le TGA ont presque la même taille environ 1,37 million d'octets très proche des pixels bruts
