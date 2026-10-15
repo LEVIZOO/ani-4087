@@ -1,0 +1,8 @@
+Analyse des resultats obtenus :
+La comparaison pixel par pixel indique que NK_NEAREST est le seul algorithme a produire une image distincte, avec 6589 pixels divergents par rapport au rendu bilineaire (soit environ 10% de la surface globale de 256x256). Cela s'explique par sa logique d'echantillonnage au plus proche voisin, sans lissage ni interpolation. En revanche, NK_BICUBIC et NK_LANCZOS3 affichent exactement 0 pixel de difference avec NK_BILINEAR. En inspectant le code source de NkImage::Resize, on constate que ces deux filtres ne sont pas encore implémentés dans le moteur et redirigent directement vers l'implementation du filtre bilineaire.
+
+Ecarts de performances enregistres :
+Sur ma machine (macOS), les trois filtres utilisant le chemin bilineaire (BILINEAR, BICUBIC, LANCZOS3) affichent des temps de calcul tres proches, se situant entre 2142 us et 2195 us. La variation inférieure a 3% releve du bruit de mesure classique de l'OS (gestion du processeur et de la mémoire). À l'inverse, NK_NEAREST s'execute en environ 612 us, ce qui est près de 3,5 fois plus rapide. Cette différence notable provient de la simplicite de l'algorithme qui effectue un acces mémoire direct sans calcul de moyenne pondérée.
+
+Contexte d'utilisation :
+Lors de l'importation d'une texture au chargement d'une scene 3D, le traitement s'effectue hors de la boucle de rendu principale. Dans ce cas, l'ecart de quelques microsecondes est négligeable : l'utilisation de NK_BILINEAR offre une meilleure qualite visuelle et reste le choix le plus adapte. NK_NEAREST, malgré sa rapidité, génère du crénelage visible sur les surfaces et ne doit être privilégie que pour des textures au style retro/pixel-art ou pour des calculs proceduraux exécutés à très haute fréquence en temps réel.
