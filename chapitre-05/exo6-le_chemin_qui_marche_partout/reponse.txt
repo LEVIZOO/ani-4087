@@ -1,0 +1,12 @@
+Origine du probleme :
+Le code de rendu restait identique dans les deux cas. La différence provenait du dossier de travail courant du processus depuis le Terminal macOS. Lancé depuis la racine du projet, le chemin photo1.jpg se résout sans problème. En revanche, lorsqu'on lance le binaire depuis le dossier d'exécution Build/Bin/Release-MacOS/renderdemo/, le chemin relatif pointe vers un emplacement où le fichier n'existe pas.
+
+Fonctionnement de LocateResource :
+Pour résoudre ce problème, l'algorithme teste les emplacements dans cet ordre :
+1) Le chemin relatif tel quel depuis le dossier courant (cas du lancement depuis le projet).
+2) Le chemin ancré au répertoire du binaire via NkPath::GetExecutableDirectory() (utile si les assets sont copiés à côté du binaire).
+3) La remontée progressive dans les dossiers parents (jusqu'à 4 niveaux) pour retrouver la racine du projet.
+Si le fichier reste introuvable, la fonction renvoie une chaîne vide au lieu d'un chemin erroné pour permettre une vérification avec Empty().
+
+Lien avec fopen :
+C'est un problème classique lié aux chemins relatifs et au répertoire de travail courant, similaire aux échecs de chargement avec fopen() lorsque le programme est exécuté depuis un dossier différent. La particularité du moteur est qu'il gère cet échec en basculant silencieusement sur la texture rose par défaut, ce qui nécessite la lecture des journaux d'exécution pour confirmer l'échec.
