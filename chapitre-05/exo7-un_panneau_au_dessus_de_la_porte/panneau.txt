@@ -1,0 +1,14 @@
+atlas : 512 x 512
+image : 72 x 32
+
+Choix de la police :
+J'ai utilisé la police intégrée Inter (NkEmbeddedFontId::Inter) paramétrée à une hauteur de 32 pixels. Il s'agit d'une police sans-serif bien adaptée aux éléments d'interface utilisateur et à la signalétique
+l'atlas généré par le moteur réserve une grille minimale de 512 x 512 pixels pour regrouper l'ensemble des caractères nécessaires
+bien que la chaîne "Sortie" n'occupe qu'une petite portion.
+
+Observation à 3 mètres :
+À cette distance, le panneau est visible au-dessus de la porte. L'inscription "Sortie" reste nette et parfaitement lisible. L'image de 72 x 32 pixels est projetée sur une surface réduite à l'écran, ce qui rend le crénelage imperceptible pour l'utilisateur.
+
+Observation à 50 centimètres :
+En se rapprochant à 50 cm, la caméra grossit l'affichage du panneau. C'est à ce niveau qu'on aperçoit la limite de la définition de l'image (72 x 32). Comme les lettres ont été calculées depuis une police rastérisée en 32 pixels, le zoom accentue le flou sur le contour des lettres
+Pour conserver une meilleure précision visuelle de près, il faudrait charger la police avec une résolution supérieure ou faire appel à un mode SDF (Signed Distance Fields).
