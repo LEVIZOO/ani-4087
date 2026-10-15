@@ -1,0 +1,13 @@
+Quand le programme essaie de charger une image de mur qui n'existe pas il réagit différemment selon la partie du code qui s'en occupe 
+La partie de base voit tout de suite que le fichier manque : elle annule le chargement et laisse l'image complètement vide
+ce qui est clair et direct. De son côté la partie plus avancée remarque aussi que le fichier est introuvable
+mais elle préfère indiquer que tout va bien. Pour éviter de laisser un trou vide elle remplace discrètement la photo manquante par une image de secours
+
+Ce fonctionnement est fait exprès pour empêcher le jeu de planter. Si une seule image manque, le programme ne s'arrête pas brusquement 
+il continue de tourner normalement. Tout le reste du décor, comme les sphères, les autres murs et les lumières reste affiché sans aucun problème 
+c'est simplement l'image manquante qui est remplacée par une couleur de secours
+
+C'est exactement ce que l'on observe sur l'écran :
+le mur est bien présent à sa place, il est éclairé et projette son ombre normalement mais sa surface est peinte en rose vif
+ce rose uniforme sert de signal visuel très simple il permet au créateur de repérer immédiatement qu'il a oublié une image à cet endroit
+tout en garantissant que le joueur puisse continuer à utiliser le jeu sans subir de blocage ou d'écran noir
